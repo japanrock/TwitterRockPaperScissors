@@ -24,6 +24,12 @@ require File.dirname(__FILE__) + '/tweet_history'
 #  2. このファイルを実行します。
 #   ruby twitter_bot.rb
 
+class Array
+  def choice
+   at( rand( size ) )
+  end
+end
+
 class Janken
   # 1. mentions を取得（24秒に１回） 
   # 2. 「グー」「チョキ」「パー」を含むメッセージがあったら返答する
