@@ -74,11 +74,11 @@ class Janken
     return nil unless text && screen_name
     
     case text
-    when /グー|ぐー/
+    when /グー|ぐー|rock/
       result = game_rock(screen_name)
-    when /チョキ|ちょき/
+    when /チョキ|ちょき|scissors/
       result = game_scissors(screen_name)
-    when /パー|ぱー/
+    when /パー|ぱー|paper/
       result = game_paper(screen_name)
     else
       result = nil
