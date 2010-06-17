@@ -88,7 +88,7 @@ class Janken
   end
 
   def post(tweet = nil)
-    @twitter_oauth.post(tweet) if tweet 
+    @twitter_oauth.post(tweet + " - " + Time.now.strftime("%Y%md%H%M%S")) if tweet 
   end
 
   def post_success?
