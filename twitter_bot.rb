@@ -24,6 +24,9 @@ require File.dirname(__FILE__) + '/tweet_history'
 #  2. このファイルを実行します。
 #   ruby twitter_bot.rb
 
+# See:
+# http://d.hatena.ne.jp/japanrock_pg/20100617/1276780421
+
 class Array
   def choice
    at( rand( size ) )
@@ -31,9 +34,6 @@ class Array
 end
 
 class Janken
-  # 1. mentions を取得（24秒に１回） 
-  # 2. 「グー」「チョキ」「パー」を含むメッセージがあったら返答する
-  
   attr_reader :all_screen_name
   attr_reader :all_status_id
   attr_reader :all_text
@@ -72,8 +72,10 @@ class Janken
 
   def game(text, screen_name)
     return nil unless text && screen_name
-    
+   
     case text
+    when /RT|QT/
+      result = nil
     when /グー|ぐー|rock/
       result = game_rock(screen_name)
     when /チョキ|ちょき|scissors/
