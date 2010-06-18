@@ -101,25 +101,25 @@ class Janken
 
   def game_rock(screen_name)
     [
-     "@#{screen_name} あいこ（あなた => グー、 _janken => グー）",
-     "@#{screen_name} あなたの勝利（あなた => グー、 _janken => チョキ）",
-     "@#{screen_name} あなたの負け（あなた => グー、 _janken => パー）"
+     "@#{screen_name} 【あいこ】あなた：グー VS_jankeni：グー",
+     "@#{screen_name} 【あなたの勝利】あなた：グー VS _janken：チョキ",
+     "@#{screen_name} 【あなたの負け】あなた：グー VS _janken：パー"
     ].choice
   end
 
   def game_scissors(screen_name)
     [
-     "@#{screen_name} あいこ（あなた => チョキ、 _janken => チョキ）",
-     "@#{screen_name} あなたの勝利（あなた => チョキ、 _janken => パー）",
-     "@#{screen_name} あなたの負け（あなた => チョキ、 _janken => グー）"
+     "@#{screen_name} 【あいこ】あなた：チョキ VS _janken：チョキ",
+     "@#{screen_name} 【あなたの勝利】あなた：チョキ VS _janken：パー",
+     "@#{screen_name} 【あなたの負け】あなた：チョキ VS _janken：グー"
     ].choice
   end
 
   def game_paper(screen_name)
     [
-     "@#{screen_name} あいこ（あなた => パー、 _janken => パー）",
-     "@#{screen_name} あなたの勝利（あなた => パー、 _janken => グー）",
-     "@#{screen_name} あなたの負け（あなた => パー、 _janken => チョキ）"
+     "@#{screen_name} 【あいこ】あなた：パー VS _janken：パー",
+     "@#{screen_name} 【あなたの勝利】あなた：パー VS _janken：グー",
+     "@#{screen_name} 【あなたの負け】あなた：パー VS _janken：チョキ"
     ].choice
   end
 end
